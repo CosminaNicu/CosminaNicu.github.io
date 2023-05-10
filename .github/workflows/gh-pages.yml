@@ -20,4 +20,5 @@ jobs:
           git config --global user.name 'Cosmina Nicu'
           git config --global user.email 'cosminanicu@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          export NODE_OPTIONS=--openssl-legacy-provider
           npm run deploy
